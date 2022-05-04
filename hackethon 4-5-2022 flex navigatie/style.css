@@ -1,0 +1,105 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  background-color: orange;
+}
+
+.container {
+  height: 100%;
+  background-color: lightskyblue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 20x 50px 1fr 50px 20px;
+  grid-template-areas:
+    "h"
+    "n"
+    "i"
+    "u"
+    "o"
+    "f";
+}
+
+header {
+  background-color: rgb(39, 255, 179);
+  grid-area: h;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.navigatie {
+  background-color: rgb(18, 142, 82);
+  display: flex;
+  list-style-type: none;
+  padding: 20px 0;
+  grid-area: n;
+}
+
+.navigatie li {
+  padding: 4px;
+  margin-left: 50px;
+  border: black solid 2px;
+}
+
+.info {
+  background-color: lightskyblue;
+  text-align: center;
+  grid-area: i;
+}
+
+.info h2 {
+  text-decoration-line: underline;
+}
+
+.updates {
+  background-color: rgb(39, 255, 179);
+  padding-left: 10px;
+  grid-area: u;
+}
+
+.over-mij {
+  background-color: lightskyblue;
+  text-align: center;
+  grid-area: o;
+}
+
+.over-mij h3 {
+  text-decoration-line: underline;
+}
+
+.footer {
+  background-color: rgb(18, 142, 82);
+  grid-area: f;
+  padding: 20px;
+}
+
+.my-form {
+  padding-left: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+.my-form label {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 100%;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 100px 40x 50px 1fr 20px;
+    grid-template-areas:
+      "h h"
+      "n o"
+      "i o"
+      "u o"
+      "f f";
+  }
+}
